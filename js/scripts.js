@@ -1,18 +1,38 @@
-/*!
-* Start Bootstrap - Shop Homepage v5.0.4 (https://startbootstrap.com/template/shop-homepage)
-* Copyright 2013-2021 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-shop-homepage/blob/master/LICENSE)
-*/
-// This file is intentionally blank
-// Use this file to add JavaScript to your project
+let cardName = document.querySelectorAll('.card-title');
+let cardImage = document.querySelectorAll('.card-img-top');
+let cardPrice = document.querySelectorAll('.card-price');
 let url = `https://fakestoreapi.com/products`;
 
 function apiRequest() {
     fetch(url)
-.then(res => res.json())
-.then(data => {
-    console.log(data);
-});
+    .then(res => res.json())
+    .then(data => {
+        // console.log(data);
+        for(let i = 0; i < data.length; i++) {
+            for(let i = 0; i < cardName.length; i++) {
+                cardName[i].innerText = data[i].title;
+            };
+            for(let i = 0; i < cardImage.length; i++) {
+                cardImage[i].src = data[i].image;
+            };
+            for(let i = 0; i < cardPrice.length; i++) {
+                cardPrice[i].innerText = `$${data[i].price}`;
+            };
+        };
+    }); 
+};
+apiRequest();
+
+let buttonBasket = document.getElementById('btn__basket'); // кнопка корзина
+let buttonAddToCard = document.querySelectorAll('.mt-auto'); //кнопки добавить в корзину
+
+buttonBasket.addEventListener('click', clickButtonBasket);
+buttonAddToCard.forEach(buttonAddToCard => buttonAddToCard.addEventListener('click', clickButtonAddToCard));
+
+function clickButtonBasket() { // работа кнопки корзина 
+console.log('нажал на корзину');
 };
 
-apiRequest();
+function clickButtonAddToCard() { // работа кнопки добавить в корзину
+    console.log('добавил');
+}
