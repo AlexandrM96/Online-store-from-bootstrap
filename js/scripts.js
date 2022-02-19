@@ -35,8 +35,10 @@ let buttonAddToCard = document.querySelectorAll('.mt-auto'); //кнопки до
 buttonBasket.addEventListener('click', clickButtonBasket);
 buttonAddToCard.forEach(buttonAddToCard => buttonAddToCard.addEventListener('click', clickButtonAddToCard));
 
-function clickButtonBasket() { // работа кнопки корзина 
+function clickButtonBasket(event) { // работа кнопки корзина 
 console.log('нажал на корзину');
+event.preventDefault();
+document.location.href = "/cart.html"
 };
 
 function clickButtonAddToCard() { // работа кнопки добавить в корзину
