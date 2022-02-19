@@ -37,6 +37,7 @@ buttonAddToCard.forEach(buttonAddToCard => buttonAddToCard.addEventListener('cli
 
 function clickButtonBasket() { // работа кнопки корзина 
 console.log('нажал на корзину');
+document.location.href = "./cart.html"
 };
 
 function clickButtonAddToCard() { // работа кнопки добавить в корзину
