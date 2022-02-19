@@ -19,10 +19,10 @@ function apiRequest() {
             for(let i = 0; i < cardPrice.length; i++) {
                 cardPrice[i].innerText = `$${data[i].price}`;
             };
-            for(let j = 0; j < data[i].rating.rate; j++) {
+            for(let j = 0; j < Math.round(data[i].rating.rate); j++) {
                let d = document.createElement('div');
                d.className = 'bi-star-fill';
-                contStar[i].append(d);
+               contStar[i].append(d);
             };
         };
     }); 
