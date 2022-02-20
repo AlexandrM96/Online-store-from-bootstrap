@@ -131,6 +131,10 @@ button:hover {
 	cursor: pointer;
 }
 
+.btReg:hover {
+  color: #1f1e1e;
+}
+
 iframe {
 	border: none !important;
 }
@@ -412,7 +416,8 @@ iframe {
 }
 
 .login100-form-btn:hover {
-  background-color: #57b846;
+  /* background-color: #57b846; */
+  background-color: #867a7a;
 }
 
 
