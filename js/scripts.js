@@ -50,6 +50,5 @@ function clickButtonAddToCard() { // работа кнопки добавить 
 
 function clickbButtonUser(event) { //работа кнопки авторизация
     event.preventDefault();
-    
-
+    document.location.href = "/login.html" // ссылка на корзину с товаром
 };
