@@ -11287,3 +11287,25 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+
+/* форма авторизации */
+
+.user-form {
+width: 300px;
+height: 300px;
+background: lightsalmon;
+margin: auto;
+display: none;
+}
+
+.first-name {
+
+}
+
+.last-name {
+
+}
+
+.gender {
+
+}

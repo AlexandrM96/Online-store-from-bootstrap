@@ -34,6 +34,12 @@
                         </li>
                     </ul>
                     <form class="d-flex">
+                        <button id="btn__enter" class="btn btn-outline-dark" type="submit">
+                            <!-- <i class="bi-cart-fill me-1"></i> -->
+                            Authorization
+                            <!-- <span class="badge bg-dark text-white ms-1 rounded-pill">0</span> -->
+                        </button>
+                    <form class="d-flex">
                         <button id="btn__basket" class="btn btn-outline-dark" type="submit">
                             <i class="bi-cart-fill me-1"></i>
                             Cart
@@ -55,6 +61,27 @@
         <!-- Section-->
         <section class="py-5">
             <div class="container px-4 px-lg-5 mt-5">
+                <!-- форма авторизации -->
+                <form class="user-form">
+                    <label>  
+                      Имя
+                      <input class="first-name" name="firstname" type="text">
+                    </label>
+                    
+                    <label>
+                      Фамилия
+                      <input class="last-name" name="lastname" type="text">
+                    </label>
+                    <label>
+                      Пол
+                      <select class="gender" name="gender">
+                        <option value="male">Мужской</option>
+                        <option value="female">Женский</option>
+                      </select>
+                    </label>
+                    <button type="button">Просто кнопка</button>
+                    <button>Отправить</button>
+                  </form>
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                     <div class="col mb-5">
                         <div class="card h-100">
